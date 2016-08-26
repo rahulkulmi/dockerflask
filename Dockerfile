@@ -5,8 +5,8 @@ RUN apt-get update && apt-get install -y curl \
 					 python-dev \
 					 build-essential
 COPY run.py .
-ADD . /dockerflask/DockerTest
-WORKDIR /dockerflask/DockerTest
+ADD . /docker
+WORKDIR /docker
 RUN pip install -r requirements.txt
 ENTRYPOINT ["python"]
 CMD ["run.py"]
