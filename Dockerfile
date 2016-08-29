@@ -2,7 +2,9 @@ FROM ubuntu:14.04
 RUN apt-get update && apt-get install -y curl \
  					 vim \
 					 python-pip \
-					 python-dev \
+					 libssl-dev \
+					 libffi-dev \
+					 python2.7-dev \
 					 build-essential
 COPY run.py .
 ADD . /docker
